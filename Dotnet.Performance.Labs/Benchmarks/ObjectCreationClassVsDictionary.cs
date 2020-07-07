@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Collections.Generic;
 using BenchmarkDotNet.Attributes;
 
-namespace Dotnet.Performance.Labs
+namespace Dotnet.Performance.Labs.Benchmarks
 {
     public class ObjectCreationClassVsDictionary : DefaultBenchmarkBase
     {

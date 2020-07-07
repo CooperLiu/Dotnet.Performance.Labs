@@ -7,8 +7,7 @@ namespace Dotnet.Performance.Labs
     {
         static void Main(string[] args)
         {
-            //BenchmarkSwitcher.FromAssembly(typeof(Program).Assembly).Run(args);
-            var summary = BenchmarkRunner.Run<ObjectCreationClassVsDictionary>();
+            var summary = BenchmarkSwitcher.FromAssembly(typeof(Program).Assembly).Run(args);
         }
     }
 }
