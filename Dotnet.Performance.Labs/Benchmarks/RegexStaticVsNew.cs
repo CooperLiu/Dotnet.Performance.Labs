@@ -37,10 +37,10 @@ namespace Dotnet.Performance.Labs.Benchmarks
         [Benchmark]
         public void NewRegexStringMatch()
         {
+            var regex = new Regex(IgnoredPathsMatchPattern, RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
             foreach (var url in _requestUrlPaths)
             {
-                var regex = new Regex(IgnoredPathsMatchPattern, RegexOptions.Compiled | RegexOptions.IgnoreCase);
-
                 _ = regex.IsMatch(url);
             }
         }
